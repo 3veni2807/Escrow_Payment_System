@@ -1,0 +1,326 @@
+/* EscrowDApp.css */
+.escrow-dapp {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wallet-connect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.connect-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+}
+
+.connect-card h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.connect-card p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.user-info {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.user-info h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+}
+
+.user-info p {
+  margin: 0;
+  word-break: break-all;
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.init-btn, .balance-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.init-btn:hover:not(:disabled), .balance-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.init-btn:disabled, .balance-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.escrow-sections {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  align-items: start;
+}
+
+@media (max-width: 968px) {
+  .escrow-sections {
+    grid-template-columns: 1fr;
+  }
+}
+
+.create-section, .escrows-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.create-section h3, .escrows-section h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 1.3em;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 10px;
+}
+
+.escrow-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.create-btn, .release-btn, .refund-btn, .refresh-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.create-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.create-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+.create-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.refresh-btn {
+  background: #28a745;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.refresh-btn:hover:not(:disabled) {
+  background: #218838;
+  transform: translateY(-1px);
+}
+
+.no-escrows {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 40px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 2px dashed #dee2e6;
+}
+
+.escrows-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.escrow-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  background: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.escrow-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+}
+
+.escrow-info {
+  margin-bottom: 15px;
+}
+
+.escrow-info p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.escrow-info p strong {
+  color: #333;
+  min-width: 80px;
+  display: inline-block;
+}
+
+.status-pending {
+  color: #ffc107;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-delivered {
+  color: #28a745;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-refunded {
+  color: #dc3545;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.escrow-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.release-btn {
+  background: #28a745;
+  color: white;
+  flex: 1;
+  min-width: 120px;
+}
+
+.release-btn:hover:not(:disabled) {
+  background: #218838;
+  transform: translateY(-1px);
+}
+
+.refund-btn {
+  background: #dc3545;
+  color: white;
+  flex: 1;
+  min-width: 120px;
+}
+
+.refund-btn:hover:not(:disabled) {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+.release-btn:disabled, .refund-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading states */
+.create-btn:disabled, .release-btn:disabled, .refund-btn:disabled, .refresh-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .escrow-dapp {
+    padding: 10px;
+  }
+  
+  .user-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .create-section, .escrows-section {
+    padding: 20px;
+  }
+  
+  .escrow-actions {
+    flex-direction: column;
+  }
+  
+  .release-btn, .refund-btn {
+    flex: none;
+  }
+}
+
+/* Animation for loading states */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.create-btn:disabled, .release-btn:disabled, .refund-btn:disabled, .refresh-btn:disabled {
+  animation: pulse 1.5s infinite;
+}

@@ -1,0 +1,15 @@
+[package]
+name = "aptos_escrow"
+version = "0.0.1"
+authors = ["Your Name"]
+
+[addresses]
+escrow = "0xaba3b69b006249fa70a1d34f2de400e3419705ffb0b7db0831c714a7378379d7"
+
+[dev-addresses]
+escrow = "0xaba3b69b006249fa70a1d34f2de400e3419705ffb0b7db0831c714a7378379d7"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
